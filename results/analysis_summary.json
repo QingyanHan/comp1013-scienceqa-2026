@@ -1,0 +1,217 @@
+{
+  "primary": [
+    {
+      "method": "majority",
+      "seed": 42,
+      "n": 1979,
+      "accuracy": 0.3567458312278929,
+      "macro_f1": 0.1314711359404096,
+      "nll": 23.18523030032649,
+      "brier": 1.2865083375442143
+    },
+    {
+      "method": "tfidf",
+      "seed": 42,
+      "n": 1979,
+      "accuracy": 0.3653360282971197,
+      "macro_f1": 0.2260312221793403,
+      "nll": 1.0969560595279662,
+      "brier": 0.6553144711169044
+    },
+    {
+      "method": "image",
+      "seed": 42,
+      "n": 1979,
+      "accuracy": 0.370389085396665,
+      "macro_f1": 0.3251577562772977,
+      "nll": 1.0970995956556495,
+      "brier": 0.6593809467326814
+    },
+    {
+      "method": "text",
+      "seed": 42,
+      "n": 1979,
+      "accuracy": 0.4386053562405255,
+      "macro_f1": 0.4337453399837561,
+      "nll": 1.0710861143264827,
+      "brier": 0.6377602640035389
+    },
+    {
+      "method": "early",
+      "seed": 42,
+      "n": 1979,
+      "accuracy": 0.4239514906518443,
+      "macro_f1": 0.4068874379108602,
+      "nll": 1.0727328069559934,
+      "brier": 0.6444567544690392
+    },
+    {
+      "method": "late",
+      "seed": 42,
+      "n": 1979,
+      "accuracy": 0.4335522991409803,
+      "macro_f1": 0.4282860417256461,
+      "nll": 1.054683841702716,
+      "brier": 0.6293456331415438
+    }
+  ],
+  "seed_summary": [
+    {
+      "method": "early",
+      "accuracy_mean": 0.429509853461344,
+      "accuracy_sd": 0.005323725999420321,
+      "accuracy_min": 0.4239514906518443,
+      "accuracy_max": 0.4345629105608893,
+      "n_seeds": 3
+    },
+    {
+      "method": "image",
+      "accuracy_mean": 0.35455617315142324,
+      "accuracy_sd": 0.014795480044465388,
+      "accuracy_min": 0.3410813542193027,
+      "accuracy_max": 0.370389085396665,
+      "n_seeds": 3
+    },
+    {
+      "method": "late",
+      "accuracy_mean": 0.43203638201111666,
+      "accuracy_sd": 0.009439889687857231,
+      "accuracy_min": 0.4219302678120262,
+      "accuracy_max": 0.4406265790803436,
+      "n_seeds": 3
+    },
+    {
+      "method": "text",
+      "accuracy_mean": 0.4392790971871315,
+      "accuracy_sd": 0.018200360665979607,
+      "accuracy_min": 0.4214249621020717,
+      "accuracy_max": 0.4578069732187974,
+      "n_seeds": 3
+    }
+  ],
+  "overfitting": [
+    {
+      "method": "text",
+      "epoch": 2,
+      "train_accuracy": 0.6296660117878192,
+      "validation_accuracy": 0.44763760350706283,
+      "gap": 0.1820284082807564,
+      "train_nll": 0.8429642326820533,
+      "validation_nll": 1.041821255237594
+    },
+    {
+      "method": "image",
+      "epoch": 2,
+      "train_accuracy": 0.46643745907007206,
+      "validation_accuracy": 0.377496346809547,
+      "gap": 0.08894111226052503,
+      "train_nll": 1.0206508448328504,
+      "validation_nll": 1.0770830576357406
+    },
+    {
+      "method": "early",
+      "epoch": 2,
+      "train_accuracy": 0.639652914210871,
+      "validation_accuracy": 0.4271797369702874,
+      "gap": 0.21247317724058362,
+      "train_nll": 0.8342047250661937,
+      "validation_nll": 1.0576867033264454
+    }
+  ],
+  "examples": [
+    {
+      "answer": 1,
+      "subject": "natural science",
+      "grade": "grade8",
+      "topic": "science-and-engineering-practices",
+      "id": "test_00001",
+      "source_index": 1,
+      "question": "Which of the following could Gordon's test show?",
+      "hint": "People can use the engineering-design process to develop solutions to problems. One step in the process is testing if a potential solution meets the requirements of the design. The passage below describes how the engineering-design process was used to test a solution to a problem. Read the passage. Then answer the question below. Gordon was an aerospace engineer who was developing a parachute for a spacecraft that would land on Mars. He needed to add a vent at the center of the parachute so the spacecraft would land smoothly. However, the spacecraft would have to travel at a high speed before landing. If the vent was too big or too small, the parachute might swing wildly at this speed. The movement could damage the spacecraft. So, to help decide how big the vent should be, Gordon put a parachute with a 1 m vent in a wind tunnel. The wind tunnel made it seem like the parachute was moving at 200 km per hour. He observed the parachute to see how much it swung. Figure: a spacecraft's parachute in a wind tunnel.",
+      "choices": [
+        "if the spacecraft was damaged when using a parachute with a 1 m vent going 200 km per hour",
+        "how steady a parachute with a 1 m vent was at 200 km per hour",
+        "whether a parachute with a 1 m vent would swing too much at 400 km per hour"
+      ],
+      "n_choices": 3,
+      "width": 302,
+      "height": 232,
+      "mode": "RGB",
+      "image_sha256": "054d19f1abaabe6d620176895ca9ff408985ba4568cc65475f2bdfc74df19a34",
+      "text_sha256": "32352480f2794087dd3edfd16f98ef351f49fe2fd98514621de6c074e5d53827",
+      "selection": "early_error",
+      "early_prediction": 0,
+      "text_prediction": 2,
+      "image_file": "figures/test_00001.png",
+      "early_probabilities": [
+        0.5479121208,
+        0.1469892263,
+        0.305098623,
+        0.0
+      ]
+    },
+    {
+      "answer": 1,
+      "subject": "social science",
+      "grade": "grade5",
+      "topic": "us-history",
+      "id": "test_00002",
+      "source_index": 2,
+      "question": "What is the name of the colony shown?",
+      "hint": "",
+      "choices": [
+        "Maryland",
+        "New Hampshire",
+        "Rhode Island",
+        "Vermont"
+      ],
+      "n_choices": 4,
+      "width": 452,
+      "height": 595,
+      "mode": "RGB",
+      "image_sha256": "edea54cff3ff799e5fd50d348171db2e4f288c1f32b64bacda053c2117d3e6a2",
+      "text_sha256": "5864bdeeec4e1bdabcacc552a947e764128bb84db1b1aed10226e867310767cd",
+      "selection": "early_error",
+      "early_prediction": 2,
+      "text_prediction": 0,
+      "image_file": "figures/test_00002.png",
+      "early_probabilities": [
+        0.2519335747,
+        0.2291153669,
+        0.3888073266,
+        0.1301437318
+      ]
+    },
+    {
+      "answer": 1,
+      "subject": "natural science",
+      "grade": "grade6",
+      "topic": "earth-science",
+      "id": "test_00015",
+      "source_index": 15,
+      "question": "Is the following statement about our solar system true or false? The largest planet is made mainly of ice.",
+      "hint": "Use the data to answer the question below.",
+      "choices": [
+        "true",
+        "false"
+      ],
+      "n_choices": 2,
+      "width": 426,
+      "height": 283,
+      "mode": "RGB",
+      "image_sha256": "bbca743fc38fa4e1bf36b6d12f36c735aac9f7277e7261dc9ad8fe202456ff4e",
+      "text_sha256": "32a2ce6acaabcd019a9ad4132dc93e49e1fa3360d3d25aa472f6bb05322cf6b4",
+      "selection": "fusion_corrected",
+      "early_prediction": 1,
+      "text_prediction": 0,
+      "image_file": "figures/test_00015.png",
+      "early_probabilities": [
+        0.4839244783,
+        0.5160755515,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "figure_note": "Plots use saved predictions and selection records. No new fitting or test selection."
+}

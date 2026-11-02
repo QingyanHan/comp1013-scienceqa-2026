@@ -1,0 +1,7 @@
+{
+  "pages": 6,
+  "method": "Raster PDF from 2560x1440 renders of finalized PPTX",
+  "reason": "Bundled Artifact Tool PDF export failed: missing #standard-fonts/Helvetica",
+  "editable_source": "delivery/ScienceQA_Presentation.pptx",
+  "pdf_text_selectable": false
+}

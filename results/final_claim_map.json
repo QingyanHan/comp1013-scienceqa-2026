@@ -1,0 +1,1160 @@
+{
+  "schema_version": 1,
+  "claims": [
+    {
+      "id": "table2_majority_accuracy",
+      "claim": "table2 majority accuracy",
+      "expected": 0.3567,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "majority",
+          "seed": "42"
+        },
+        "column": "accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_majority_macro_f1",
+      "claim": "table2 majority macro f1",
+      "expected": 0.131,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "majority",
+          "seed": "42"
+        },
+        "column": "macro_f1"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_majority_nll",
+      "claim": "table2 majority nll",
+      "expected": 23.185,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "majority",
+          "seed": "42"
+        },
+        "column": "nll"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_majority_brier",
+      "claim": "table2 majority brier",
+      "expected": 1.287,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "majority",
+          "seed": "42"
+        },
+        "column": "brier"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_tfidf_accuracy",
+      "claim": "table2 tfidf accuracy",
+      "expected": 0.3653,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "tfidf",
+          "seed": "42"
+        },
+        "column": "accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_tfidf_macro_f1",
+      "claim": "table2 tfidf macro f1",
+      "expected": 0.226,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "tfidf",
+          "seed": "42"
+        },
+        "column": "macro_f1"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_tfidf_nll",
+      "claim": "table2 tfidf nll",
+      "expected": 1.097,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "tfidf",
+          "seed": "42"
+        },
+        "column": "nll"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_tfidf_brier",
+      "claim": "table2 tfidf brier",
+      "expected": 0.655,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "tfidf",
+          "seed": "42"
+        },
+        "column": "brier"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_image_accuracy",
+      "claim": "table2 image accuracy",
+      "expected": 0.3704,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "image",
+          "seed": "42"
+        },
+        "column": "accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_image_macro_f1",
+      "claim": "table2 image macro f1",
+      "expected": 0.325,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "image",
+          "seed": "42"
+        },
+        "column": "macro_f1"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_image_nll",
+      "claim": "table2 image nll",
+      "expected": 1.097,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "image",
+          "seed": "42"
+        },
+        "column": "nll"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_image_brier",
+      "claim": "table2 image brier",
+      "expected": 0.659,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "image",
+          "seed": "42"
+        },
+        "column": "brier"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_text_accuracy",
+      "claim": "table2 text accuracy",
+      "expected": 0.4386,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "text",
+          "seed": "42"
+        },
+        "column": "accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_text_macro_f1",
+      "claim": "table2 text macro f1",
+      "expected": 0.434,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "text",
+          "seed": "42"
+        },
+        "column": "macro_f1"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_text_nll",
+      "claim": "table2 text nll",
+      "expected": 1.071,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "text",
+          "seed": "42"
+        },
+        "column": "nll"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_text_brier",
+      "claim": "table2 text brier",
+      "expected": 0.638,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "text",
+          "seed": "42"
+        },
+        "column": "brier"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_early_accuracy",
+      "claim": "table2 early accuracy",
+      "expected": 0.424,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "early",
+          "seed": "42"
+        },
+        "column": "accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_early_macro_f1",
+      "claim": "table2 early macro f1",
+      "expected": 0.407,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "early",
+          "seed": "42"
+        },
+        "column": "macro_f1"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_early_nll",
+      "claim": "table2 early nll",
+      "expected": 1.073,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "early",
+          "seed": "42"
+        },
+        "column": "nll"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_early_brier",
+      "claim": "table2 early brier",
+      "expected": 0.644,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "early",
+          "seed": "42"
+        },
+        "column": "brier"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_late_accuracy",
+      "claim": "table2 late accuracy",
+      "expected": 0.4336,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "late",
+          "seed": "42"
+        },
+        "column": "accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_late_macro_f1",
+      "claim": "table2 late macro f1",
+      "expected": 0.428,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "late",
+          "seed": "42"
+        },
+        "column": "macro_f1"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_late_nll",
+      "claim": "table2 late nll",
+      "expected": 1.055,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "late",
+          "seed": "42"
+        },
+        "column": "nll"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table2_late_brier",
+      "claim": "table2 late brier",
+      "expected": 0.629,
+      "source": {
+        "path": "results/test_metrics.csv",
+        "format": "csv",
+        "match": {
+          "method": "late",
+          "seed": "42"
+        },
+        "column": "brier"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.0005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_train_raw_rows",
+      "claim": "table1 train raw rows",
+      "expected": 12726,
+      "source": {
+        "path": "results/train_data_audit.json",
+        "format": "json",
+        "pointer": "/raw_rows"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_train_no_image",
+      "claim": "table1 train no image",
+      "expected": 6508,
+      "source": {
+        "path": "results/train_data_audit.json",
+        "format": "json",
+        "pointer": "/no_image"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_train_excluded_choice_count",
+      "claim": "table1 train excluded choice count",
+      "expected": 110,
+      "source": {
+        "path": "results/train_data_audit.json",
+        "format": "json",
+        "pointer": "/excluded_choice_count"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_train_included",
+      "claim": "table1 train included",
+      "expected": 6108,
+      "source": {
+        "path": "results/train_data_audit.json",
+        "format": "json",
+        "pointer": "/included"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_validation_raw_rows",
+      "claim": "table1 validation raw rows",
+      "expected": 4241,
+      "source": {
+        "path": "results/validation_data_audit.json",
+        "format": "json",
+        "pointer": "/raw_rows"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_validation_no_image",
+      "claim": "table1 validation no image",
+      "expected": 2144,
+      "source": {
+        "path": "results/validation_data_audit.json",
+        "format": "json",
+        "pointer": "/no_image"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_validation_excluded_choice_count",
+      "claim": "table1 validation excluded choice count",
+      "expected": 44,
+      "source": {
+        "path": "results/validation_data_audit.json",
+        "format": "json",
+        "pointer": "/excluded_choice_count"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_validation_included",
+      "claim": "table1 validation included",
+      "expected": 2053,
+      "source": {
+        "path": "results/validation_data_audit.json",
+        "format": "json",
+        "pointer": "/included"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_test_raw_rows",
+      "claim": "table1 test raw rows",
+      "expected": 4241,
+      "source": {
+        "path": "results/test_data_audit.json",
+        "format": "json",
+        "pointer": "/raw_rows"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_test_no_image",
+      "claim": "table1 test no image",
+      "expected": 2224,
+      "source": {
+        "path": "results/test_data_audit.json",
+        "format": "json",
+        "pointer": "/no_image"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_test_excluded_choice_count",
+      "claim": "table1 test excluded choice count",
+      "expected": 38,
+      "source": {
+        "path": "results/test_data_audit.json",
+        "format": "json",
+        "pointer": "/excluded_choice_count"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "table1_test_included",
+      "claim": "table1 test included",
+      "expected": 1979,
+      "source": {
+        "path": "results/test_data_audit.json",
+        "format": "json",
+        "pointer": "/included"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_text_best_epoch",
+      "claim": "primary text best epoch",
+      "expected": 2,
+      "source": {
+        "path": "results/text_42_selection.json",
+        "format": "json",
+        "pointer": "/best_epoch"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_text_head_parameters",
+      "claim": "primary text head parameters",
+      "expected": 246404,
+      "source": {
+        "path": "results/text_42_selection.json",
+        "format": "json",
+        "pointer": "/head_parameters"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_text_training_seconds",
+      "claim": "primary text training seconds",
+      "expected": 2.61,
+      "source": {
+        "path": "results/text_42_selection.json",
+        "format": "json",
+        "pointer": "/training_seconds"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_text_train_accuracy",
+      "claim": "primary text train accuracy",
+      "expected": 0.6297,
+      "source": {
+        "path": "results/text_42_selection.json",
+        "format": "json",
+        "pointer": "/train/accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_text_validation_accuracy",
+      "claim": "primary text validation accuracy",
+      "expected": 0.4476,
+      "source": {
+        "path": "results/text_42_selection.json",
+        "format": "json",
+        "pointer": "/validation/accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_image_best_epoch",
+      "claim": "primary image best epoch",
+      "expected": 2,
+      "source": {
+        "path": "results/image_42_selection.json",
+        "format": "json",
+        "pointer": "/best_epoch"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_image_head_parameters",
+      "claim": "primary image head parameters",
+      "expected": 66180,
+      "source": {
+        "path": "results/image_42_selection.json",
+        "format": "json",
+        "pointer": "/head_parameters"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_image_training_seconds",
+      "claim": "primary image training seconds",
+      "expected": 2.06,
+      "source": {
+        "path": "results/image_42_selection.json",
+        "format": "json",
+        "pointer": "/training_seconds"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_image_train_accuracy",
+      "claim": "primary image train accuracy",
+      "expected": 0.4664,
+      "source": {
+        "path": "results/image_42_selection.json",
+        "format": "json",
+        "pointer": "/train/accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_image_validation_accuracy",
+      "claim": "primary image validation accuracy",
+      "expected": 0.3775,
+      "source": {
+        "path": "results/image_42_selection.json",
+        "format": "json",
+        "pointer": "/validation/accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_early_best_epoch",
+      "claim": "primary early best epoch",
+      "expected": 2,
+      "source": {
+        "path": "results/early_42_selection.json",
+        "format": "json",
+        "pointer": "/best_epoch"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_early_head_parameters",
+      "claim": "primary early head parameters",
+      "expected": 311940,
+      "source": {
+        "path": "results/early_42_selection.json",
+        "format": "json",
+        "pointer": "/head_parameters"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_early_training_seconds",
+      "claim": "primary early training seconds",
+      "expected": 2.9,
+      "source": {
+        "path": "results/early_42_selection.json",
+        "format": "json",
+        "pointer": "/training_seconds"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0.005,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_early_train_accuracy",
+      "claim": "primary early train accuracy",
+      "expected": 0.6397,
+      "source": {
+        "path": "results/early_42_selection.json",
+        "format": "json",
+        "pointer": "/train/accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "primary_early_validation_accuracy",
+      "claim": "primary early validation accuracy",
+      "expected": 0.4272,
+      "source": {
+        "path": "results/early_42_selection.json",
+        "format": "json",
+        "pointer": "/validation/accuracy"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_text_accuracy_mean",
+      "claim": "three seed text accuracy mean",
+      "expected": 0.4393,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "text"
+        },
+        "column": "accuracy_mean"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_text_accuracy_sd",
+      "claim": "three seed text accuracy sd",
+      "expected": 0.0182,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "text"
+        },
+        "column": "accuracy_sd"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_early_accuracy_mean",
+      "claim": "three seed early accuracy mean",
+      "expected": 0.4295,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "early"
+        },
+        "column": "accuracy_mean"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_early_accuracy_sd",
+      "claim": "three seed early accuracy sd",
+      "expected": 0.0053,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "early"
+        },
+        "column": "accuracy_sd"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_late_accuracy_mean",
+      "claim": "three seed late accuracy mean",
+      "expected": 0.432,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "late"
+        },
+        "column": "accuracy_mean"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_late_accuracy_sd",
+      "claim": "three seed late accuracy sd",
+      "expected": 0.0094,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "late"
+        },
+        "column": "accuracy_sd"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_image_accuracy_mean",
+      "claim": "three seed image accuracy mean",
+      "expected": 0.3546,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "image"
+        },
+        "column": "accuracy_mean"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "three_seed_image_accuracy_sd",
+      "claim": "three seed image accuracy sd",
+      "expected": 0.0148,
+      "source": {
+        "path": "results/seed_summary.csv",
+        "format": "csv",
+        "match": {
+          "method": "image"
+        },
+        "column": "accuracy_sd"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 5e-05,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "train_truncated_passages",
+      "claim": "train truncated passages",
+      "expected": 529,
+      "source": {
+        "path": "results/train_feature_timing.json",
+        "format": "json",
+        "pointer": "/question_hint_rows_truncated"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "train_truncated_choices",
+      "claim": "train truncated choices",
+      "expected": 0,
+      "source": {
+        "path": "results/train_feature_timing.json",
+        "format": "json",
+        "pointer": "/choice_sequences_truncated"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "train_cpu_threads",
+      "claim": "train cpu threads",
+      "expected": 4,
+      "source": {
+        "path": "results/train_feature_timing.json",
+        "format": "json",
+        "pointer": "/threads"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "validation_truncated_passages",
+      "claim": "validation truncated passages",
+      "expected": 161,
+      "source": {
+        "path": "results/validation_feature_timing.json",
+        "format": "json",
+        "pointer": "/question_hint_rows_truncated"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "validation_truncated_choices",
+      "claim": "validation truncated choices",
+      "expected": 0,
+      "source": {
+        "path": "results/validation_feature_timing.json",
+        "format": "json",
+        "pointer": "/choice_sequences_truncated"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "validation_cpu_threads",
+      "claim": "validation cpu threads",
+      "expected": 4,
+      "source": {
+        "path": "results/validation_feature_timing.json",
+        "format": "json",
+        "pointer": "/threads"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "test_truncated_passages",
+      "claim": "test truncated passages",
+      "expected": 174,
+      "source": {
+        "path": "results/test_feature_timing.json",
+        "format": "json",
+        "pointer": "/question_hint_rows_truncated"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "test_truncated_choices",
+      "claim": "test truncated choices",
+      "expected": 0,
+      "source": {
+        "path": "results/test_feature_timing.json",
+        "format": "json",
+        "pointer": "/choice_sequences_truncated"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "test_cpu_threads",
+      "claim": "test cpu threads",
+      "expected": 4,
+      "source": {
+        "path": "results/test_feature_timing.json",
+        "format": "json",
+        "pointer": "/threads"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    },
+    {
+      "id": "test_denominator",
+      "claim": "test denominator",
+      "expected": 1979,
+      "source": {
+        "path": "results/test_evaluation_receipt.json",
+        "format": "json",
+        "pointer": "/n"
+      },
+      "comparison": {
+        "mode": "number",
+        "abs_tol": 0,
+        "rel_tol": 0
+      }
+    }
+  ]
+}

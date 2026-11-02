@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-27T00:25:58.645902+00:00",
+  "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.22000-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "device": "cpu",
+  "threads": 4,
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "torch": "2.10.0+cu128",
+    "torchvision": "0.25.0+cu128",
+    "transformers": "5.17.0",
+    "sentence-transformers": "6.2.0",
+    "scikit-learn": "1.8.0",
+    "pyarrow": "23.0.1",
+    "pillow": "12.0.0",
+    "joblib": "1.5.3",
+    "matplotlib": "3.10.7"
+  }
+}

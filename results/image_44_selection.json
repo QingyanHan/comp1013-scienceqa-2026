@@ -1,0 +1,21 @@
+{
+  "kind": "image",
+  "seed": 44,
+  "best_epoch": 1,
+  "epochs_run": 7,
+  "training_seconds": 1.721298000018578,
+  "head_parameters": 66180,
+  "checkpoint_bytes": 267101,
+  "train": {
+    "accuracy": 0.45104780615586115,
+    "macro_f1": 0.4207337553397012,
+    "nll": 1.0377474683385304,
+    "brier": 0.6176852084457535
+  },
+  "validation": {
+    "accuracy": 0.3609352167559669,
+    "macro_f1": 0.3408495914689643,
+    "nll": 1.0764534314020386,
+    "brier": 0.6480040068279237
+  }
+}

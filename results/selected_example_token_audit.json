@@ -1,0 +1,20 @@
+[
+  {
+    "id": "test_00001",
+    "full_tokens_including_special": 253,
+    "retained_tokens_including_special": 128,
+    "retained_text": "Question: Which of the following could Gordon's test show? Hint: People can use the engineering-design process to develop solutions to problems. One step in the process is testing if a potential solution meets the requirements of the design. The passage below describes how the engineering-design process was used to test a solution to a problem. Read the passage. Then answer the question below. Gordon was an aerospace engineer who was developing a parachute for a spacecraft that would land on Mars. He needed to add a vent at the center of the parachute so the spacecraft would land smoothly."
+  },
+  {
+    "id": "test_00002",
+    "full_tokens_including_special": 17,
+    "retained_tokens_including_special": 17,
+    "retained_text": "Question: What is the name of the colony shown? Hint:"
+  },
+  {
+    "id": "test_00015",
+    "full_tokens_including_special": 39,
+    "retained_tokens_including_special": 39,
+    "retained_text": "Question: Is the following statement about our solar system true or false? The largest planet is made mainly of ice. Hint: Use the data to answer the question below."
+  }
+]

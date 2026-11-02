@@ -1,0 +1,40 @@
+{
+  "raw_rows": 12726,
+  "no_image": 6508,
+  "excluded_choice_count": 110,
+  "included": 6108,
+  "decode_failures": 0,
+  "choice_counts": {
+    "4": 2221,
+    "2": 2071,
+    "3": 1816
+  },
+  "answer_counts": {
+    "0": 2244,
+    "1": 2153,
+    "2": 1153,
+    "3": 558
+  },
+  "subject_counts": {
+    "social science": 2245,
+    "natural science": 3727,
+    "language science": 136
+  },
+  "grade_counts": {
+    "grade2": 432,
+    "grade8": 854,
+    "grade7": 885,
+    "grade6": 899,
+    "grade3": 911,
+    "grade4": 1126,
+    "grade5": 975,
+    "grade12": 21,
+    "grade1": 5
+  },
+  "empty_hint": 2274,
+  "unique_image_hashes": 4926,
+  "unique_text_hashes": 5054,
+  "uniform_guess_expected_accuracy": 0.3595421305391836,
+  "audit_seconds": 19.810333600005833,
+  "source_arrow_sha256": "4d7cee0ebeb21cc23e3239ba817a41460ffdc923d4dd633b4b64dc21ac45dade"
+}

@@ -1,0 +1,18 @@
+{
+  "early": {
+    "accuracy_difference": -0.014653865588681153,
+    "ci95_low": -0.037897928246589184,
+    "ci95_high": 0.00808489135927236,
+    "repetitions": 2000,
+    "unit": "question",
+    "caveat": "Descriptive IID bootstrap; repeated images/templates can violate independence."
+  },
+  "late": {
+    "accuracy_difference": -0.005053057099545225,
+    "ci95_low": -0.015159171298635674,
+    "ci95_high": 0.004547751389590703,
+    "repetitions": 2000,
+    "unit": "question",
+    "caveat": "Descriptive IID bootstrap; repeated images/templates can violate independence."
+  }
+}

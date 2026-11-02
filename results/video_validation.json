@@ -1,0 +1,186 @@
+{
+  "synthetic_voice": "Microsoft Zira Desktop",
+  "student_recording": false,
+  "duration_seconds": 179.983203,
+  "bytes": 2788624,
+  "limit_bytes": 30000000,
+  "tempo_factor": 1.1498519561081137,
+  "timeline": [
+    {
+      "slide": 1,
+      "start_seconds": 0.0,
+      "end_seconds": 20.92,
+      "original_voice_seconds": 22.91487528344671
+    },
+    {
+      "slide": 2,
+      "start_seconds": 20.92,
+      "end_seconds": 57.0,
+      "original_voice_seconds": 40.357142857142854
+    },
+    {
+      "slide": 3,
+      "start_seconds": 57.0,
+      "end_seconds": 88.16,
+      "original_voice_seconds": 34.668072562358276
+    },
+    {
+      "slide": 4,
+      "start_seconds": 88.16,
+      "end_seconds": 119.47999999999999,
+      "original_voice_seconds": 34.872789115646256
+    },
+    {
+      "slide": 5,
+      "start_seconds": 119.47999999999999,
+      "end_seconds": 148.35999999999999,
+      "original_voice_seconds": 32.07850340136054
+    },
+    {
+      "slide": 6,
+      "start_seconds": 148.35999999999999,
+      "end_seconds": 179.95999999999998,
+      "original_voice_seconds": 35.182857142857145
+    }
+  ],
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "level": 31,
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.64001f",
+        "width": 1280,
+        "height": 720,
+        "coded_width": 1280,
+        "coded_height": 720,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "16:9",
+        "pix_fmt": "yuv420p",
+        "color_range": "tv",
+        "color_transfer": "iec61966-2-1",
+        "color_primaries": "bt709",
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "25/1",
+        "avg_frame_rate": "25/1",
+        "time_base": "1/12800",
+        "start_pts": 297,
+        "start_time": "0.023203",
+        "duration_ts": 2303488,
+        "duration": "179.960000",
+        "bit_rate": "64432",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "4499",
+        "extradata_size": 49,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.25.100 libx264"
+        }
+      },
+      {
+        "index": 1,
+        "codec_name": "aac",
+        "codec_long_name": "AAC (Advanced Audio Coding)",
+        "profile": "LC",
+        "codec_type": "audio",
+        "codec_tag_string": "mp4a",
+        "codec_tag": "0x6134706d",
+        "mime_codec_string": "mp4a.40.2",
+        "sample_fmt": "fltp",
+        "sample_rate": "44100",
+        "channels": 1,
+        "channel_layout": "mono",
+        "bits_per_sample": 0,
+        "initial_padding": 0,
+        "seek_preroll": 1024,
+        "id": "0x2",
+        "r_frame_rate": "0/0",
+        "avg_frame_rate": "0/0",
+        "time_base": "1/44100",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 7936402,
+        "duration": "179.963764",
+        "bit_rate": "52754",
+        "nb_frames": "7756",
+        "extradata_size": 5,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "SoundHandler"
+        }
+      }
+    ],
+    "format": {
+      "filename": "C:\\Users\\\u674e\u6d77\u6bc5\\Desktop\\My project\\Project\\2026S2\\Multi-Modal Data Analysis\\scienceqa_project\\delivery\\ScienceQA_Synthetic_Rehearsal.mp4",
+      "nb_streams": 2,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "179.983203",
+      "size": "2788624",
+      "bit_rate": "123950",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.17.100"
+      }
+    }
+  }
+}

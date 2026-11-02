@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-11-02T11:56:51.503929+00:00",
+  "status": "passed",
+  "report_pages": 9,
+  "report_body_words": 1740,
+  "slides": 6,
+  "native_charts": 2,
+  "native_tables": 2,
+  "speaker_notes": 6,
+  "numeric_claims_matched": 69,
+  "independent_checks": 136,
+  "source_only_checks": 125,
+  "offline_helper_tests": {
+    "passed": 3,
+    "command": "python -m unittest discover -s tests -v",
+    "observed_in_this_review": true,
+    "training_and_downloads_mocked": true
+  },
+  "frozen_experiment_hashes_unchanged": true,
+  "new_model_experiments": false,
+  "video_seconds": 179.983203,
+  "video_bytes": 2788624,
+  "student_recording": false,
+  "clean_machine_full_reproduction_performed": false,
+  "visual_review": "All 9 report pages and all 6 finalized slides inspected; video contact sheet checked separately.",
+  "artifacts": {
+    "ScienceQA_Project2_2_Report.pdf": "804e62b9a65af3e5f17d94a1f2ba561205d27f3eafd42ccf5fe75a4b44ee6626",
+    "ScienceQA_Presentation.pptx": "9ac63f2ec5faa80ea5639e05a45dc2ad321b0286f9075096e9a6b03116f87e18",
+    "ScienceQA_Presentation.pdf": "adfcf7ec1ba0127e2766e7612149833513204db0217a526dd1303aa7e7acb0eb",
+    "ScienceQA_Synthetic_Rehearsal.mp4": "1d07cbcfcef25f3879a685ecb1f4fcbdddd692d65e4c7fd760ce2750cf8cf6fb"
+  }
+}

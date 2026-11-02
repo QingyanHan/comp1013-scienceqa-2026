@@ -1,0 +1,8 @@
+{
+  "image_sha256": {
+    "validation_rows_seen_in_train": 576
+  },
+  "text_sha256": {
+    "validation_rows_seen_in_train": 429
+  }
+}

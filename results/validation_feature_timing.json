@@ -1,0 +1,18 @@
+{
+  "device": "cpu",
+  "threads": 4,
+  "image_seconds": 92.26029219999327,
+  "image_rows": 2053,
+  "image_weight_sha256": "f37072fd47e89c5e827621c5baffa7500819f7896bbacec160b1a16c560e07ec",
+  "image_weight_bytes": 46830571,
+  "image_feature_sha256": "16717e4674b0c081e98852d21eed5958bc33ec237274819402716bceb4b362d2",
+  "text_seconds": 50.54313780000666,
+  "unique_text_sequences": 2417,
+  "text_rows": 2053,
+  "unique_sequences_truncated": 156,
+  "question_hint_rows_truncated": 161,
+  "choice_sequences_truncated": 0,
+  "text_weight_sha256": "eaa086f0ffee582aeb45b36e34cdd1fe2d6de2bef61f8a559a1bbc9bd955917b",
+  "text_weight_bytes": 470641600,
+  "text_feature_sha256": "86d467c752707bae355c7b1c5820c8a90ec893afbbfeaa928ae94b1f886d7622"
+}

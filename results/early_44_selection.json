@@ -1,0 +1,21 @@
+{
+  "kind": "early",
+  "seed": 44,
+  "best_epoch": 2,
+  "epochs_run": 8,
+  "training_seconds": 2.761912200017832,
+  "head_parameters": 311940,
+  "checkpoint_bytes": 1250141,
+  "train": {
+    "accuracy": 0.6458742632612967,
+    "macro_f1": 0.6348001594979501,
+    "nll": 0.8291925986790952,
+    "brier": 0.4861528125091276
+  },
+  "validation": {
+    "accuracy": 0.4378957622990745,
+    "macro_f1": 0.4208078308644686,
+    "nll": 1.0581455630213004,
+    "brier": 0.6341276510546484
+  }
+}
