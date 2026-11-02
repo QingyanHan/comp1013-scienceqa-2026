@@ -1,0 +1,99 @@
+ScienceQA answer prediction Early and late fusion with frozen encoders
+
+Qingyan Han | a1988836 | COMP1013 Project 2.2 | 2 November 2026
+
+1. Problem and data quality
+
+This project tests whether adding frozen visual features improves multiple-choice science answer prediction over a text model. The practical setting is a low-compute educational prototype that receives a question, optional hint, answer choices and an image. Predicting an answer position is narrower than explaining scientific reasoning. ScienceQA [1] provides the task; this experiment evaluates only its image-bearing subset and makes no comparison with full-benchmark leaderboard scores.
+
+The cached Hugging Face conversion [2] retains the official splits. Rows without an image or outside two to four choices are excluded before fitting. Table 1 reconciles every exclusion. All retained images decoded successfully, and all labels were legal. Missing hints remain empty rather than being filled with answers. Lectures, solutions and diagnostic metadata are excluded from model inputs. Stable identifiers retain the original split and row index.
+
+Split Original No image Other K Retained
+
+Train 12,726 6,508 110 6,108
+
+Validation 4,241 2,144 44 2,053
+
+Test 4,241 2,224 38 1,979
+
+Table 1. Population accounting. K is the number of answer options. The test population was processed only after model selection was locked.
+
+ Changes from proposal.  The task, official splits and two fusion families are retained. Proposal counts 6,218/2,097/2,017 preceded the choice-count filter; Table 1 corrects all three denominators. The cached MiniLM model, explicit 128-unit heads and validation-selected settings make the planned architecture concrete. Three seeds, probability scores, overlap and truncation audits extend the planned accuracy/F1 evaluation to expose uncertainty and shortcuts. The proposal's projected T4 timing was an extrapolation, not a GPU measurement; this report replaces it with measured CPU costs. Appendix B supplies the promised confusion matrices.
+
+Exact-byte image and normalised full-input-text hashes reveal repeated material: 576 validation images and 429 validation texts occur in training. The test counts are 555 and 375. Repeated illustrations do not necessarily imply identical questions, but they limit independence. Official denominators are retained, with unseen-image/text subset diagnostics in Section 4. Training labels A/B/C/D number 2,244/2,153/1,153/558, so position imbalance matters.
+
+2. Representations and fusion
+
+The frozen ImageNet ResNet-18 encoder [3,4] supplies 512 features. RGB images are resized with aspect-preserving white padding to 224 by 224 and ImageNet normalisation. Padding retains diagram boundaries that centre cropping could remove. No OCR, augmentation or encoder fine-tuning is used.
+
+The cached multilingual MiniLM sentence encoder [5,6] supplies a normalised 384-dimensional embedding for question plus hint and each ordered choice. Concatenating five slots gives 1,920 features, with zero slots for missing options. Each sequence is capped at 128 tokens. Question/hint truncation affects 529/6,108 training, 161/2,053 validation and 174/1,979 test rows; no choices are truncated. Local availability motivates this encoder, while the evaluation remains English-only.
+
+2. Representations and fusion (continued)
+
+Following the distinction between feature-level and decision-level fusion [7], the two models combine modalities at different stages. Each modality is standardised using training-set statistics. The text-only, image-only and early-fusion classifiers use a 128-unit ReLU layer, dropout [8] at a rate of 0.2 and four output logits. Early fusion concatenates image and text features before classification, enabling joint feature interactions. Late fusion averages independently learned probabilities: p = w p(text) + (1-w) p(image). This decision-level approach can reduce overconfidence without learning cross-modal interactions. The known choice count masks impossible positions for every method; it never uses the correct answer.
+
+The majority-position and TF-IDF/logistic-regression baselines test label and lexical shortcuts. TF-IDF uses training-fitted unigrams/bigrams, 30,000 maximum features, minimum document frequency two and sublinear counts. Validation negative log-likelihood (NLL) selects C from {0.1, 1, 4}; C=0.1 wins. This differs from the proposal feasibility setting and is not a replication of its reported accuracy.
+
+3. Experimental design and main results
+
+The heads are trained with AdamW [9] using a learning rate of 0.001, decoupled weight decay of 0.001 and batches of 128. Training stops after six epochs without validation-NLL improvement of 0.0001, or at 40 epochs, restoring the best checkpoint. Seed 42 is primary; seeds 43/44 assess optimisation sensitivity on the same data. A validation grid w=0,0.05,...,1 selects 0.70/0.65/0.65. Source, configuration and model hashes are locked before one test evaluation. No test-dependent tuning follows.
+
+Accuracy measures exact answers; macro-F1 weights answer positions equally. NLL penalises assigning low probability to the correct answer. The multiclass Brier score sums squared errors across the answer probabilities. Both are proper scoring rules, expressed here as losses [10]. Table 2 reports the predeclared primary seed. Uniform guessing has expected accuracy 35.79%, accounting for varying K. The deterministic majority baseline has an extreme NLL because incorrect answers receive zero probability, clipped numerically.
+
+Method Accuracy % Macro-F1 NLL Brier
+
+Majority A 35.67 0.131 23.185 1.287
+
+TF-IDF + LR 36.53 0.226 1.097 0.655
+
+Image only 37.04 0.325 1.097 0.659
+
+Text only 43.86 0.434 1.071 0.638
+
+Early fusion 42.40 0.407 1.073 0.644
+
+Late fusion 43.36 0.428 1.055 0.629
+
+Table 2. Test performance on all 1,979 retained questions, primary seed 42. Higher accuracy/F1 and lower NLL/Brier are preferred.
+
+Text-only has the highest primary accuracy (43.86%). Early fusion reaches 42.40%, a -1.47 percentage-point difference; late fusion reaches 43.36%, a -0.51-point difference. Paired question bootstrap intervals (2,000 draws) are [-3.79, 0.81] and [-1.52, 0.45] points. These descriptive intervals include zero and may be optimistic when templates repeat. Late fusion improves NLL from 1.071 to 1.055 and Brier from 0.638 to 0.629, but neither scoring rule alone proves calibration.
+
+4. Overfitting, robustness and failures
+
+Figure 1. Primary training and validation NLL. Dotted lines mark selected checkpoints. Continued fitting improves training fit while validation loss deteriorates.
+
+All primary heads select epoch two. Text train/validation accuracy is 62.97/44.76%, early fusion 63.97/42.72%, and image-only 46.64/37.75%. Figure 1 shows why the later accuracy peaks were not selected: the fixed objective is probability loss. Early fusion also has more trainable parameters (311,940 versus 246,404 for text), so this is a practical architecture comparison rather than a capacity-matched causal test.
+
+Across three fixed seeds, mean test accuracy and sample standard deviation are text 43.93 +/- 1.82%, early 42.95 +/- 0.53%, late 43.20 +/- 0.94%, and image 35.46 +/- 1.48%. These are optimisation summaries, not confidence intervals across independent datasets. The aggregate ordering does not support an accuracy benefit from fusion.
+
+Permuting images within choice-count strata reduces early accuracy from 42.40 to 41.74% and late accuracy from 43.36 to 43.20%. The small changes are consistent with limited useful visual contribution, although this distribution-shift diagnostic cannot establish causal reasoning. On 1,424 test questions with images unseen in training, text/early/late accuracy is 39.26/37.43/38.83%. On 1,604 unseen-text questions it is 43.39/42.27/42.83%. Neither restricted subset is a new independent benchmark.
+
+The first two early-fusion errors in test order are retained in Appendix A. In test_00001, the 253-token engineering passage is truncated to 128 tokens, omitting the actual wind-tunnel conditions. Early fusion predicts damage detection instead of parachute steadiness; truncation is a concrete information loss, not proof of the sole error cause. In test_00002, a highlighted map region is New Hampshire, while early fusion chooses Rhode Island. Global visual features may not preserve the necessary spatial distinction. The first fusion-corrected case, test_00015, changes “true” to “false” for an ice-composition statement about the largest planet, with probability only 0.516. One success does not demonstrate table reading.
+
+5. Efficiency, ethics and reflection
+
+All measurements use CPU and four threads. Across the three splits, image extraction takes 438.24 seconds and text extraction 235.07 seconds, excluding model loading and audit overhead. Text sequences are deduplicated within each split, so timings are workload-specific. Primary head fitting takes 2.61 seconds for text, 2.06 for images and 2.90 for early fusion. TF-IDF search, including vectorisation and all candidates, takes 5.74 seconds.
+
+Method Head parameters Checkpoint MiB Cached ms/question
+
+Text 246,404 0.94 0.00577
+
+Image 66,180 0.25 0.00204
+
+Early 311,940 1.19 0.00740
+
+Table 3. Primary head costs. Inference is the median of 20 full-test batch passes after warm-up, excluding feature extraction and scaling. MiB = 2^20 bytes.
+
+The shared pretrained weight files occupy 493.50 MiB, separate from the small fitted heads; scalers occupy 0.056 MiB. Late fusion requires both unimodal heads plus probability mixing and has no separately timed end-to-end latency here. TF-IDF text vectorisation plus inference is 0.14405 ms/question and is not directly comparable to cached neural inference. No GPU speed, energy or production-throughput claim is made.
+
+Subject imbalance limits fairness claims. Primary text accuracy is 49.10% for natural science (n=1,171), 34.95% for social science (n=764), and 59.09% for language science (n=44). The smallest group is too small for a stable ranking. Grade-one and grade-twelve test groups contain only two and five questions. Grade/subject are not protected demographic attributes, and no demographic fairness conclusion follows. Answer-position macro-F1 does not measure educational fairness.
+
+The images and educational content require upstream attribution and licence compliance [1,2]. Raw datasets, pretrained weights and private course correspondence are not published in the code repository. Public pretrained encoders may contain unknown benchmark exposure, which this audit cannot rule out. Incorrect confident answers could mislead learners; these results support an experimental comparison, not an autonomous teaching or grading system. Human checking remains necessary.
+
+Implemented safeguards address different risks: train-only fitting and the selection lock prevent direct test-driven selection; legal-choice masks eliminate impossible answers but not answer-position bias. Overlap and subgroup audits reveal limitations rather than remove them. No rebalancing or demographic mitigation was evaluated, so effectiveness is unknown. Future grouped splits and balanced sampling require fresh validation; removing repeated content would also change the benchmark population. US-centred curricula and English-only evaluation limit transfer to other classrooms. Human review reduces exposure to wrong answers but has no measured benefit here.
+
+The main lesson is that richer inputs do not automatically improve this restricted model. Lost passage context and weak map/table representations motivate validating chunked text and OCR-aware features, with a capacity-matched control. Feature caching makes repeated head fitting cheap, but new inputs still incur encoder costs; these batch timings cannot establish interactive scalability. Teachers should treat the model as a research prototype pending curriculum-specific validation. Longer-context and visual improvements remain untested proposals; no extra test-driven experiments were run.
+
+The accompanying code and README provide staged commands, pinned inputs, manifests, learning curves, model-selection records and saved predictions. An independent verifier passed 136 structural, checksum and metric checks on the recorded run. Reproduction on a fresh machine remains untested.
+
+ Code and README   github.com/QingyanHan/comp1013-scienceqa-2026 
